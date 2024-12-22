@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: url('http://cdn.wallpapersafari.com/93/17/LBNsxU.jpg');
+}
+
+.game-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    position: relative;
+    width: 800px;
+    height: 400px; 
+    background: #fff; 
+    border: 5px solid #ff69b4; 
+    border-radius: 20px; 
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: #654321; 
+    border-top: 3px solid #ffcc00; 
+}
+
+.kuromi {
+    position: absolute;
+    bottom: 60px; 
+    width: 50px;
+    height: 50px;
+    background: url('https://pnghq.com/wp-content/uploads/kuromi-character-transparent-png-free-image-png.png') no-repeat center center/contain;
+    animation: run 0.3s steps(2) infinite;
+}
+
+@keyframes run {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+.cactus {
+    position: absolute;
+    bottom: 60px; 
+    width: 50px;
+    height: 50px;
+    background: url('https://i.pinimg.com/originals/53/14/d0/5314d0d0ecabf8aa82fb5ec85b4847fd.png') no-repeat center center/contain;
+    background-size: contain;
+}
+
+.score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff69b4; 
+    text-shadow: 1px 1px 2px #000;
+}
+
+.winner, .game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #ffffff;
+    display: none;
+    text-shadow: 2px 2px 5px #000;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.instructions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
